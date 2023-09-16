@@ -9,6 +9,14 @@ Package license: MIT
 
 Summary: a data warehouse for scenario analysis
 
+Development: https://github.com/iiasa/ixmp4
+
+Documentation: http://docs.ece.iiasa.ac.at/ixmp4
+
+The ixmp4 package is a data warehouse for high-powered scenario analysis
+in the domain of integrated assessment of climate change and energy systems modeling
+
+
 Current build status
 ====================
 
@@ -144,4 +152,6 @@ Feedstock Maintainers
 =====================
 
 * [@danielhuppmann](https://github.com/danielhuppmann/)
+* [@meksor](https://github.com/meksor/)
+* [@phackstock](https://github.com/phackstock/)
 

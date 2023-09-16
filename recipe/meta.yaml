@@ -1,5 +1,5 @@
 {% set name = "ixmp4" %}
-{% set version = "0.4.0" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
-  sha256: 427608b3813c1977356a65d80c61fba44291a015ea6dd937a94dae0f1fdb6cb3
+  sha256: e4fad15899ff19f3d4644a3164b9e2b1efde7370e049628576d5310e6e642e10
 
 build:
   noarch: python
@@ -39,7 +39,7 @@ requirements:
     - requests >=2.27.1,<3.0.0
     - typer >=0.4.0,<0.5.0
     - toml >=0.10.2,<0.11.0
-    - psycopg2 >=2.9.7,<3.0.0
+    - psycopg >=3.1.10,<4.0.0
 
 test:
   imports:
@@ -52,9 +52,16 @@ test:
 about:
   home: https://software.ece.iiasa.ac.at
   summary: a data warehouse for scenario analysis
+  description: |
+    The ixmp4 package is a data warehouse for high-powered scenario analysis
+    in the domain of integrated assessment of climate change and energy systems modeling
   license: MIT
   license_file: LICENSE
+  doc_url: http://docs.ece.iiasa.ac.at/ixmp4
+  dev_url: https://github.com/iiasa/ixmp4
 
 extra:
   recipe-maintainers:
+    - meksor
+    - phackstock
     - danielhuppmann
