@@ -52,9 +52,16 @@ test:
 about:
   home: https://software.ece.iiasa.ac.at
   summary: a data warehouse for scenario analysis
+  description: |
+    The ixmp4 package is a data warehouse for high-powered scenario analysis
+    in the domain of integrated assessment of climate change and energy systems modeling
   license: MIT
   license_file: LICENSE
+  doc_url: http://docs.ece.iiasa.ac.at/ixmp4
+  dev_url: https://github.com/iiasa/ixmp4
 
 extra:
   recipe-maintainers:
+    - meksor
+    - phackstock
     - danielhuppmann
