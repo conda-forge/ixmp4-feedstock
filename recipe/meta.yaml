@@ -1,5 +1,5 @@
 {% set name = "ixmp4" %}
-{% set version = "0.7.2" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
-  sha256: ba9d6d958b86b024121c9ab3cd554065e58ac0483bbee8b49a6e1def09cb7ead
+  sha256: f5569cbecc139eca6a456f4cfb70faab6f71653cdd3d18d080d82f09b6778abd
 
 build:
   entry_points:
@@ -29,6 +29,7 @@ requirements:
     - sqlalchemy-utils >=0.41.1,<0.42.0
     - alembic >=1.13.1,<2.0.0
     - dask-core >=2024.1.1,<2025.0.0
+    - dask-expr >=1.0.2,<2.0.0
     - fastapi >=0.109.0,<0.110.0
     - httpx >=0.26.0,<0.27.0
     - openpyxl >=3.0.9,<4.0.0
