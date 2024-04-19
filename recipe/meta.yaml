@@ -1,5 +1,5 @@
 {% set name = "ixmp4" %}
-{% set version = "0.8.2" %}
+{% set version = "0.8.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
-  sha256: 5b40ce4e85695973cd7adedb699e91951560827fd1ed76960cf538e83e6e3282
+  sha256: 472fe7555fc71a7200360b877889ecff40686d22bc6dfff28a448b2edd6dab78
 
 build:
   entry_points:
@@ -29,15 +29,15 @@ requirements:
     - sqlalchemy-utils >=0.41.0
     - alembic >=1.12.0
     - fastapi >=0.100.0
-    - httpx >=0.25
+    - httpx >=0.25.0
     - openpyxl >=3.0.9
-    - pandas >=2.1.1
+    - pandas >=2.0.0
     - pandera >=0.17.0
     - pydantic >=2.3.0
     - python-dotenv >=1.0.1
     - typer >=0.9.0
     - toml >=0.10.2
-    - psycopg >=3.1.12
+    - psycopg >=3.1.12,<4.0.0
     - pydantic-settings >=2.1.0
     - rich >=13.5.2
 
