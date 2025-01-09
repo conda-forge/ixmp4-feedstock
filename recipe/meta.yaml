@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "ixmp4" %}
-{% set version = "0.9.7" %}
+{% set version = "0.9.8" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
-  sha256: 8769134acfd226e651354c6da4d2c9a59a0a678ddeb2f69c3bbb5592b861a4b2
+  sha256: fe84bddfb4a6d920839f06930792471be3819d16518b2c9e870ee06f4c1bb6fb
 
 build:
   entry_points:
@@ -32,7 +32,7 @@ requirements:
     - fastapi >=0.100.0
     - httpx >=0.25.0
     - openpyxl >=3.0.9
-    - pandas >=2.0.0
+    - pandas >=2.1.0
     - pandera >=0.17.0
     - pydantic >=2.3.0
     - python-dotenv >=1.0.1
