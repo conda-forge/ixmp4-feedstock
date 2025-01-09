@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "ixmp4" %}
 {% set version = "0.9.7" %}
 
@@ -6,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
   sha256: 8769134acfd226e651354c6da4d2c9a59a0a678ddeb2f69c3bbb5592b861a4b2
 
 build:
@@ -18,12 +19,12 @@ build:
 
 requirements:
   host:
-    - python >=3.10,<3.13
+    - python {{ python_min }}
     - poetry-core >=1.2.0
     - poetry-dynamic-versioning
     - pip
   run:
-    - python >=3.10,<3.13
+    - python >={{ python_min }},<3.13
     - pyjwt >=2.4.0
     - sqlalchemy >=2.0.22
     - sqlalchemy-utils >=0.41.0
@@ -49,6 +50,7 @@ test:
     - ixmp4 --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://software.ece.iiasa.ac.at
