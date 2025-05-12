@@ -152,6 +152,7 @@ Feedstock Maintainers
 =====================
 
 * [@danielhuppmann](https://github.com/danielhuppmann/)
+* [@glatterf42](https://github.com/glatterf42/)
 * [@meksor](https://github.com/meksor/)
 * [@phackstock](https://github.com/phackstock/)
 
