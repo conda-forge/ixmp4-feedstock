@@ -1,6 +1,6 @@
-{% set python_min = '3.10' %}
+{% set python_min = "3.10" %}
 {% set name = "ixmp4" %}
-{% set version = "0.9.8" %}
+{% set version = "0.10.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,19 +8,19 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
-  sha256: fe84bddfb4a6d920839f06930792471be3819d16518b2c9e870ee06f4c1bb6fb
+  sha256: 62b043093694afda8d73099f49696e4faf715a679eee187f15bc20a3452bbdd1
 
 build:
   entry_points:
     - ixmp4 = ixmp4.__main__:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
-    - poetry-core >=1.2.0
+    - poetry-core >=2.0,<3.0
     - poetry-dynamic-versioning
     - pip
   run:
@@ -38,9 +38,10 @@ requirements:
     - python-dotenv >=1.0.1
     - typer >=0.9.0
     - toml >=0.10.2
-    - psycopg >=3.1.12,<4.0.0
+    - psycopg >=3.1.12
     - pydantic-settings >=2.1.0
     - rich >=13.5.2
+    - sqlalchemy-continuum >=1.4.2
 
 test:
   imports:
