@@ -26,14 +26,14 @@ requirements:
   run:
     - python >={{ python_min }},<3.14
     - pyjwt >=2.4.0
-    - sqlalchemy >=2.0.22
+    - sqlalchemy-with-postgresql-psycopgbinary >=2.0.22
     - sqlalchemy-utils >=0.41.0
     - alembic >=1.12.0
     - fastapi >=0.100.0
     - httpx >=0.25.0
     - openpyxl >=3.0.9
-    - pandas >=2.1.0
-    - pandera >=0.17.0
+    - pandas >=2.1.1
+    - pandera >=0.24.0
     - pydantic >=2.3.0
     - python-dotenv >=1.0.1
     - typer >=0.9.0
@@ -41,7 +41,8 @@ requirements:
     - psycopg >=3.1.12
     - pydantic-settings >=2.1.0
     - rich >=13.5.2
-    - sqlalchemy-continuum >=1.4.2
+    - h2 >=3,<5
+    - mypy >=1.7
 
 test:
   imports:
