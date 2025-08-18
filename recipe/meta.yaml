@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "ixmp4" %}
-{% set version = "0.11.1" %}
+{% set version = "0.11.2" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
-  sha256: 8197ce437cbf32784ca6ae588eb09a17074e2c201c187bb14b3bbfe91a30ce19
+  sha256: 5c974ea12ebe1e8e288ca390fd4be0850c9dad3c7e3d234e643773276d533d59
 
 build:
   entry_points:
@@ -26,7 +26,7 @@ requirements:
   run:
     - python >={{ python_min }},<3.14
     - pyjwt >=2.4.0
-    - sqlalchemy >=2.0.22
+    - sqlalchemy-with-postgresql-psycopgbinary >=2.0.22
     - sqlalchemy-utils >=0.41.0
     - alembic >=1.12.0
     - fastapi >=0.100.0
@@ -41,7 +41,8 @@ requirements:
     - psycopg >=3.1.12
     - pydantic-settings >=2.1.0
     - rich >=13.5.2
-    - sqlalchemy-continuum >=1.4.2
+    - h2 >=3,<5
+    - mypy >=1.7
 
 test:
   imports:
