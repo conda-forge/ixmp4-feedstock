@@ -15,7 +15,7 @@ build:
     - ixmp4 = ixmp4.__main__:app
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -32,8 +32,8 @@ requirements:
     - fastapi >=0.100.0
     - httpx >=0.25.0
     - openpyxl >=3.0.9
-    - pandas >=2.1.0
-    - pandera >=0.17.0
+    - pandas >=2.1.1
+    - pandera >=0.24.0
     - pydantic >=2.3.0
     - python-dotenv >=1.0.1
     - typer >=0.9.0
