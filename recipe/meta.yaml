@@ -1,6 +1,6 @@
 {% set python_min = "3.10" %}
 {% set name = "ixmp4" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ixmp4-{{ version }}.tar.gz
-  sha256: 6fcf444318b2b48b7c290c697f51c1c20f9a0fe37b7d3744ee4d696c339a1d1d
+  sha256: 3d4905f3cb895b76088333baea358803eed197318a573fd3f4240fb8cfa92c70
 
 build:
   entry_points:
